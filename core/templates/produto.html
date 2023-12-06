@@ -2,25 +2,24 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Djanto 1 - Index</title>
+        <title>Djanto 1 - Produto</title>
     </head>
     <body>
-        <h1>Index</h1>
-        {{ curso }}
+        <h1>Produto</h1>
         <table border="1">
             <thead>
                 <tr>
                     <th>Produto</th>
                     <th>Preço</th>
+                    <th>Estoque</th>
                 </tr>
             </thread>
             <tbody>
-                {% for produto in produtos %}
                 <tr>
-                    <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+                    <td>{{ produto.nome }}</td>
                     <td>{{ produto.preco }}</td>
+                    <td>{{ produto.estoque }}</td>
                 </tr>
-                {% endfor %}
             </tbody>
         </table>
     </body>
